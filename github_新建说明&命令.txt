@@ -2,17 +2,19 @@
 
 /////*****************************************安装git：*****************************************/////
 
- 在finder里按下cmd+shift+G，然后输入~/.ssh，确定，你就能看到你的文件了
+在finder里按下cmd+shift+G，然后输入~/.ssh，确定，你就能看到你的文件了
  
 ssh-keygen -t rsa -C "285567635@qq.com"
 
 ssh -T git@github.com
 
+
+提交指令：
 git add . 提交到缓存区
 
 git commit -m 'test2' 提交到版本区
 
-git push origin master  push到版本区，才会在网上更新。
+
 
 git reset HEAD 文件名  从暂存区到工作区（从绿变红）
 git checkout -- 文件名	把工作区的代码还原成暂存区的
@@ -21,7 +23,37 @@ git checkout -- 文件名	把工作区的代码还原成暂存区的
 git commit -m '注释说明' --amend
 1、先把遗漏的文件提交到暂存区；
 2、撤回最近一次已经提交到版本区的到缓存区，再和未提交到的一起从暂存区提交，将之前最近的一次删除掉。
- 
+
+
+
+删除指令：
+git rm   删除文件名称加后缀
+git rm -f   删除文件名称加后缀
+git rm -rf  删除空文件夹
+rm -rf      删除整个文件夹
+
+
+回滚：
+还原指定文件：（注意删除前先要commit提交下，来获取到历史记录）
+git checkout  历史记录ID  删除文件名称加后缀
+
+还原整个历史记录：（注意删除前先要commit提交下，来获取到历史记录）
+git reset --hard  历史记录ID
+
+
+
+
+同步到远程仓库：
+git push origin master  提交到github远程仓库区，需要连网才会在网上更新。
+
+git remote 查看远程仓库的名字
+
+git remote -y   查看远程仓库对应的地址
+
+git remote add 名字 url 新建仓库的名字
+
+
+
 
 
 
