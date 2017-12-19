@@ -8,6 +8,12 @@ ssh-keygen -t rsa -C "285567635@qq.com"
 
 ssh -T git@github.com
 
+git add . 提交到缓存区
+
+git commit -m 'test2' 提交到版本区
+
+git push origin master  push到版本区，才会在网上更新。
+ 
 
 
 
