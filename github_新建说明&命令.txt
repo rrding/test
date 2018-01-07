@@ -12,7 +12,9 @@ ssh -T git@github.com
 提交指令：
 git add . 提交到缓存区
 
+
 git commit -m 'test2' 提交到版本区
+git commit -a -m 'test2' 批量提交到版本区
 
 
 
@@ -51,6 +53,29 @@ git remote 查看远程仓库的名字
 git remote -y   查看远程仓库对应的地址
 
 git remote add 名字 url 新建仓库的名字
+
+
+
+git config --global user.email "285567625@qq.com"
+
+
+
+上传冲突：
+Git fetch 冲突时用，将远程文件拉下来
+
+Git diff master origin/masater 线上冲突比对
+
+Git merge origin/master 合并文件，人为去删除冲突代码
+
+Git commit -m ''  再次提交到版本区
+Git push origin master 提交到仓库
+
+长期存储密码：
+git config --global credential.helper store
+
+
+ssh -T git@github.com
+
 
 
 
